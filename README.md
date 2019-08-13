@@ -10,19 +10,19 @@ Los objetos no se **crean** (excepto la primera vez) ni se **destruyen** solo se
   3. El cliente realiza operaciones con el objeto
   4. El cliente devuelve el objeto, y el pool elimina las referencias anteriores
 
-(imagen de secuencia)
+![enter image description here](https://raw.githubusercontent.com/santiagoQuinter/ObjectPool/master/OP.png)
 
 ## Casos particulares
 ### El pool no tiene objetos disponibles
 Crear un nuevo objeto y se lo asigna al cliente que lo solicitó
 
 ### Número maximo de objetos a crear
-Un pool puede tener un limite de objetos a crear, con el fin de tener más control sobre la memoria utilizado
+Un pool puede tener un limite de objetos a crear, con el fin de tener mayor control sobre la memoria utilizada
 
 ### El pool alcanzó el número maximo de objetos a crear
 Tiene dos posibilidades cuando llega una nueva solicitud: 
-			1.	Lanzar una exception y bloquear al hilo
-			2.	Esperar hasta que un objeto sea liberado de la pool
+1.	Lanzar una exception y bloquear al hilo
+2.	Esperar hasta que un objeto sea liberado de la pool
 
 # ¿Cuándo usar Object Pool?
 * Cuando instanciar objetos tiene un coste alto
@@ -32,7 +32,6 @@ Tiene dos posibilidades cuando llega una nueva solicitud:
 	* Recursos gráficos
 * La tasa de creación de objetos es alta 
 	* Recursos gráficos
-
 
 ## Ventajas
 * Aumenta el rendimiento
