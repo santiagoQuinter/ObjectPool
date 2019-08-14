@@ -12,6 +12,8 @@ Los objetos no se **crean** (excepto la primera vez) ni se **destruyen** solo se
 
 ![enter image description here](https://raw.githubusercontent.com/santiagoQuinter/ObjectPool/master/OP.png)
 
+
+![enter image description here](https://raw.githubusercontent.com/santiagoQuinter/ObjectPool/master/ObjectPool.png)
 ## Casos particulares
 ### El pool no tiene objetos disponibles
 Crear un nuevo objeto y se lo asigna al cliente que lo solicitó
@@ -40,3 +42,8 @@ Tiene dos posibilidades cuando llega una nueva solicitud:
 ## Desventajas
 * Aumenta la complejidad de la implementación 
 * Se ocupa más memoria al mantener objetos inicializados
+
+## Estrategias de implementación
+* **Eager**:  Los objetos son inicializados al momento de creacion del pool 
+* **Lazy**: Los objetos se crean a medida que se van utilizando
+* **Hybrid**: Crean algunos objetos al iniciar y otros cuando se necesitan  
